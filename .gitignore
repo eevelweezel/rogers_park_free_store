@@ -1,0 +1,7 @@
+*.swp
+.coverage
+htmlcov
+*.pem
+.venv
+*logs/*
+*/__pycache__/*

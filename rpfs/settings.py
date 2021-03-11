@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'rpfs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'rpfs',
         'USER': 'rpfs',
         'PASSWORD': 'rpfs',
