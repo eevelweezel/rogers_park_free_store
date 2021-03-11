@@ -20,5 +20,5 @@ from rpfs.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', HomeView.as_view()),
+    path('', HomeView.as_view()),
 ]
