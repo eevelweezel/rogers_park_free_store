@@ -4,7 +4,6 @@ from django.db import models
 class Category(models.Model):
     product_category = models.CharField(max_length=30)
 
-    # Not sure how to modify the below 2 lines of code
     def __str__(self):
         return self.product_category
 
