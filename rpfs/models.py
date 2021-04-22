@@ -14,8 +14,6 @@ class Category(models.Model):
 
 
 class Prouct(models.Model):
-   
-class Product(models.Model):
     category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)        
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
