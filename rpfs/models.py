@@ -27,7 +27,7 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='images/')
     slug = models.SlugField(max_length=255)
-    status = models.CharField(max_length=50, choices=[('A', 'Active'), ('I', 'Inactive')])
+    active = models.BooleanField(default=True)
     post_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -40,6 +40,3 @@ class Product(models.Model):
     
     def __str__(self):
         return self.title
-
-
-
