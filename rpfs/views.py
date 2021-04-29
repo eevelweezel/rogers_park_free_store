@@ -18,5 +18,5 @@ def category_list(request, category_slug=None):
     return render(request, 'rpfs/products/category.html', {'category': category, 'products': products})
 
 def product_detail(request, slug):
-    product = get_object_or_404(Product, slug=slug, still_avail=True)
+    product = get_object_or_404(Product, slug=slug, active=True)
     return render(request, 'rpfs/products/detail.html', {'product': product})     
