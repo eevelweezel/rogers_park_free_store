@@ -10,6 +10,5 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug', 'post_date', 'updated']
-    list_filter = ['status', 'post_date']
-    list_editable = ['status']
+    list_filter = ['active', 'post_date']
     prepopulated_fields = {'slug': ('title',)}
