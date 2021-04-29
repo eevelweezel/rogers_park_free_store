@@ -10,13 +10,13 @@ def categories(request):
 
 def all_products(request):
     products = Product.objects.all()
-    return render(request, 'rpfs/home.html', {'products': products})
+    return render(request, 'home.html', {'products': products})
 
 def category_list(request, category_slug=None):
     category = get_object_or_404(Category, slug=category_slug)
     products = Product.objects.filter(category=category)
-    return render(request, 'rpfs/products/category.html', {'category': category, 'products': products})
+    return render(request, 'category.html', {'category': category, 'products': products})
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug, still_avail=True)
-    return render(request, 'rpfs/products/detail.html', {'product': product})     
+    return render(request, 'detail.html', {'product': product})     
