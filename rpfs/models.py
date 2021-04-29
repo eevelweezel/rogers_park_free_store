@@ -21,25 +21,22 @@ class Category(models.Model):
         return self.name
 
 
-class Prouct(models.Model):
+class Product(models.Model):
     category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)        
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='images/')
     slug = models.SlugField(max_length=255)
-    status = models.CharField(max_lenth=50, choices=[('A', 'Active'), ('I', 'Inactive')])
+    active = models.BooleanField(default=True)
     post_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name_plural = 'Products'
-        ordering = ['product_name']
+        ordering = ['title']
   
     def get_absolute_url(self):
         return reverse('store:product_detail', args=[self.slug])
     
     def __str__(self):
         return self.title
-
-
-
