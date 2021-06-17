@@ -2,4 +2,4 @@ Django==3.1.7
 django-bootstrap4==2.3.1
 django-simple-captcha==0.5.14
 psycopg2==2.8.6
-pillow=pillow-8.2.0
+pillow==8.2.0

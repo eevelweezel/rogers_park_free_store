@@ -41,5 +41,16 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
+#    class Contact(models.Model):
+#        char = models.CharField(verbose_name="Name", max_length=220, unique=True, help_text="added help text")    
+#        email = models.EmailField()
+#        subject = models.CharField(max_length=255)
+#        message = models.TextField()
+
+#    def __str__(self):
+#        return self.email    
+
+      
+
 
 
