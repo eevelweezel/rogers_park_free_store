@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+#from multiselectfield import MultiSelectField
 
 
 class ProductManager(models.Manager):
@@ -35,7 +36,21 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-#    class Contact(models.Model):
+    #class Volunteer(models.Model):
+     #   VOLUNTEER_POSITIONS = (
+            #('a', 'Working at the Free Store location during "closed to public" times (organizing the space, putting supply packages together, etc.)'),
+     #       ('b', 'Working at the Free Store location during "open to public" times (handing out requested supplies, helping neighbors make supply requests, etc.)'),
+      #      ('c', 'Delivering supplies either from or to the Free Space (will need a car)'),
+       #     ('d', 'Volunteer Coordination/Training/Support (can be working from home)'),
+        #    ('e', 'Inventory and/or financial book-keeping (can be working from home)'),
+         #   ('f', 'Outreach and/or social media (can be working from home)'),
+          #  ('g', 'Translation (Spanish, French, Chinese, others if applicable)'),
+           # ('h', 'Other'),
+
+       # )
+        #position = MultiSelectField(choices = VOLUNTEER_POSITIONS)
+
+
 #        char = models.CharField(verbose_name="Name", max_length=220, unique=True, help_text="added help text")    
 #        email = models.EmailField()
 #        subject = models.CharField(max_length=255)

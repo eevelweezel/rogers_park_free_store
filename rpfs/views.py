@@ -44,7 +44,7 @@ class VolunteerSignup(FormView):
         return TemplateResponse(
                    request,
                    'volunteer.html',
-                   context={'form': self.form_class()},
+                   context={'form': self.form_class(*args, **kwargs)},
                    status=200)
 
     
@@ -63,7 +63,7 @@ class ContactUs(FormView):
         return TemplateResponse(
                    request,
                    'contact.html',
-                   context={'form': self.form_class()},
+                   context={'form': self.form_class(*args, **kwargs)},
                    status=200)
 
 def about(request):
