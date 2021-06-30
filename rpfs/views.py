@@ -47,7 +47,6 @@ class VolunteerSignup(FormView):
                    context={'form': self.form_class(*args, **kwargs)},
                    status=200)
 
-    
 class ContactUs(FormView):
     # TODO: you can use this class as a model to add views for other
     # contact forms. 

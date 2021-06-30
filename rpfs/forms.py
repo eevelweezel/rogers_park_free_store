@@ -44,15 +44,19 @@ class VolunteerForm(CaptchaContactForm):
     email = forms.EmailField(label='Email', required=True)
     pronouns = forms.CharField(label='Pronouns', required=True)
     message = forms.CharField(label='Message', widget=forms.Textarea, required=True)
-   # VOLUNTEER_CHOICES = (
-    #        ('Working at the Free Store location during "closed to public" times (organizing the space, putting supply packages together, etc.)'),
-     #       ('Working at the Free Store location during "open to public" times (handing out requested supplies, helping neighbors make supply requests, etc.)'),
-      #      ('Delivering supplies either from or to the Free Space (will need a car)'),
-       #     ('Volunteer Coordination/Training/Support (can be working from home)'),
-        #    ('Inventory and/or financial book-keeping (can be working from home)'),
-         #   ('Outreach and/or social media (can be working from home)'),
-          #  ('Translation (Spanish, French, Chinese, others if applicable)'),
-           # ('Other'),
-     
-        #)
+    VOLUNTEER_CHOICES = (
+            ('a', 'Working at the Free Store location during "closed to public" times (organizing the space, putting supply packages together, etc.)'),
+            ('b', 'Working at the Free Store location during "open to public" times (handing out requested supplies, helping neighbors make supply requests, etc.)'),
+            ('c', 'Delivering supplies either from or to the Free Space (will need a car)'),
+            ('d', 'Volunteer Coordination/Training/Support (can be working from home)'),
+            ('e', 'Inventory and/or financial book-keeping (can be working from home)'),
+            ('f', 'Outreach and/or social media (can be working from home)'),
+            ('g', 'Translation (Spanish, French, Chinese, others if applicable)'),
+            ('h', 'Other'),
+    )
+    volunteer_field = forms.MultipleChoiceField(label='Volunteer Positions', choices = VOLUNTEER_CHOICES)
+
+    
+    #how render this form into a view??? Do we need to create code in views.py?
+
 #    title = forms.MultipleChoiceField(choices =VOLUNTEER_CHOICES)
