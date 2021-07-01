@@ -5,6 +5,7 @@ from django.urls import (
     include,
     path
 )
+
 from . import views
 from .views import (
     about,
@@ -21,7 +22,6 @@ urlpatterns = [
  #   path('', views.all_products, name='all_products'),
     path('search/', views.category_list, name='category_list'),
     path('admin/', admin.site.urls),
-    path('', all_products, name ="home"),
     path('contact/', ContactUs.as_view(), name ="contact"),
     path('volunteer/', VolunteerSignup.as_view(), name ="volunteer"),
     path('about/', about, name ="about"),
@@ -29,6 +29,7 @@ urlpatterns = [
     path('success/', successView, name='success'),
     path('captcha/', include('captcha.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
+    path('', all_products, name ="home"),
 ]
  
 

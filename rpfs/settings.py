@@ -70,6 +70,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.i18n',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -133,6 +134,9 @@ LANGUAGES = [
     ('es', _('Spanish')),   
 ]
 
+LOCALE_PATHS = [ 
+    BASE_DIR / 'rpfs/locale',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
