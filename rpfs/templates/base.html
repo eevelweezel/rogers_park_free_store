@@ -37,24 +37,24 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav nav-fill w-100">
 <li class="nav-item menu-item">
-<a class-"nav-link" href="/">Home</a>
+<a class-"nav-link" href="/">{% translate "Home" %}</a>
 </li>
-{% for p in posts %}
+<!--{% for p in posts %}
 <li class="nav-item menu-item">
 <a class-"nav-link" href="{% url 'show_post' p.slug %}">{{ p.link_text }}</a>
 </li>
-{% endfor %}
+{% endfor %}-->
 <li class="nav-item menu-item">
-<a class-"nav-link" href="/about/">About Us</a>
+<a class-"nav-link" href="/about/">{% translate "About Us" %}</a>
 </li>
 <li class="nav-item menu-item">
-<a class-"nav-link" href="/items/">Store</a>
+<a class-"nav-link" href="/items/">{% translate "Store" %}</a>
 </li>
 <li class="nav-item menu-item">
-<a class-"nav-link" href="/volunteer/">Volunteer</a>
+<a class-"nav-link" href="/volunteer/">{% translate "Volunteer" %}</a>
 </li>
 <li class="nav-item menu-item">
-<a class-"nav-link" href="/contact/">Contact Us</a>
+<a class-"nav-link" href="/contact/">{% translate "Contact Us" %}</a>
 </li>
 </ul>
 </nav>
@@ -62,7 +62,7 @@
 <br>
 <br>
 <div class="fluid_container">
-<h1 class="text-center">Rogers Park Free Store</h1>
+<h1 class="text-center">{% translate "Rogers Park Free Store" %}</h1>
 <a href="/"><img class="img-fluid d-block mx-auto" src="/static/images/rpfs_logo.jpg" vspace="10" alt="RPFS Logo" style="height:50px;"/></a>
 <p class="text-center italic">Our next open day will be Tuesday June 22th from 2 to 4 pm<br>
 6808 N Ashland Blvd. Chicago, Illinois 60626</span></p>
@@ -75,7 +75,7 @@
 <br>
 <br>
 <div class="fluid_container">
-<p><a href='/'>Home</a> | <a href="https://www.facebook.com/RFPS"> Facebook </a> | <a href='https://www.gofundme.com/f/the-solar-shrine-community-arts-project'>Donate Now</a> | Site by <a href="https://github.com/eevelweezel">Weezel&Spinny</a>, 2021.</p>
+<p><a href='/'>{% translate "Home" %}</a> | <a href="https://www.facebook.com/RFPS"> Facebook </a> | <a href='/'>{% translate "Donate Now" %}</a> | {% translate "Site by" %} <a href="https://github.com/eevelweezel">Weezel</a> & <a href="https://github.com/katbait">Spinny</a>, 2021.</p>
 </div>
 </body>
 </html>

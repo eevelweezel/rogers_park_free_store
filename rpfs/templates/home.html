@@ -1,6 +1,7 @@
-{% extends "./base.html" %}
+{% extends "base.html" %}
 {% load static %}
-{% block title %}Home{% endblock %}
+{% load i18n %}
+{% block title %}{{ title }}{% endblock %}
 {% block content %}
 
 
@@ -9,17 +10,16 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="h1 fw-bold">Support your community! Search & View Items! Make an Offer!</h1>
-        <p class="lead text-muted">Something short and leading about the collection—its contents, the creator,
-          etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <h1 class="h1 fw-bold">{% translate "Support your community! Donate or exchange your unused household goods! Volunteer and help your neighbors!" %}</h1>
+        <p class="lead text-muted">{% translate "Rogers Park Free Store is a volunteer-run collective, run for the neighborhood, by the neighborhood." %}</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Contact Us!</a>
+          <a href="#" class="btn btn-primary my-2">{% translate "Contact Us!" %}</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <!--<div class="album py-5 bg-light">
     <div class="container">
 
       <div class="pb-3 h5">All Items</div>
@@ -45,7 +45,7 @@
 
       </div>
     </div>
-  </div>
+  </div>-->
 
 
 </main>

@@ -1,6 +1,7 @@
 from django.template.response import TemplateResponse
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.edit import FormView
+from django.utils.translation import gettext as _
 from django.conf import settings
 from django.core.mail import send_mail
 from .forms import (
@@ -17,7 +18,7 @@ def categories(request):
 
 def all_products(request):
     products = Product.objects.all()
-    return render(request, 'home.html', {'products': products})
+    return render(request, 'home.html', {'products': products, 'title': _('Home')})
 
 def category_list(request, category_slug=None):
     category = get_object_or_404(Category, slug=category_slug)

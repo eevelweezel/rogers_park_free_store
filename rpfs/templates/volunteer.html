@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
 <!--TODO: Everthing below here is from my old Volunteer Page from May2021 branch -->
    
-              <h2 class="heading">Rogers Park Free Store Volunteer Signup!</h2>
-                <p>Thank you for your interest in volunteering with the Rogers Park Free Store! We are a volunteer-led community organization working to provide mutual aid and meet some of the needs of the Rogers Park community through a "Free Store" by the Morse Red Line CTA stop. 
-The Free Store needs volunteers for different jobs and capacities, and we would love to have you join and work with us! Volunteer roles are available both for those who want to work from home and those who would feel comfortable working in the Free Store location. For the Free Store space, there will be COVID guidelines pertaining to masks/PPE and distancing policies to ensure safety of our volunteers and the community (Further details to come.)
-Currently volunteers are needed for the following roles: 
-        Delivery drivers, Creating Supply Packages, Volunteer Coordination, Book-keeping, Outreach/Social Media, Translation, Inventory Management, and more!
-We look forward to hearing from you!</p>
+              <h2 class="heading">{% translate "Rogers Park Free Store Volunteer Signup!" %}</h2>
+                <p>{% translate "Thank you for your interest in volunteering with the Rogers Park Free Store! We are a volunteer-led community organization working to provide mutual aid and meet some of the needs of the Rogers Park community through a <b>Free Store</b> by the Morse Red Line CTA stop. 
+The Free Store needs volunteers for different jobs and capacities, and we would love to have you join and work with us! Volunteer roles are available both for those who want to work from home and those who would feel comfortable working in the Free Store location. For the Free Store space, there will be COVID guidelines pertaining to masks/PPE and distancing policies to ensure safety of our volunteers and the community (Further details to come.)" %}</p>
+<p>{% translate "Currently volunteers are needed for the following roles: Delivery drivers, Creating Supply Packages, Volunteer Coordination, Book-keeping, Outreach/Social Media, Translation, Inventory Management, and more!" %}</p>
+<p>{% translate "We look forward to hearing from you!" %}</p>
 
     
     
@@ -20,7 +20,7 @@ We look forward to hearing from you!</p>
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center white">
-                        <h2>Volunteer Form</h2>
+                        <h3>{% translate "Volunteer with us!" %}</h3>
                         <div class="line"></div>
                     </div>
                 </div>
@@ -53,12 +53,11 @@ We look forward to hearing from you!</p>
 {% endfor %}
 </fieldset>
 <div class="form-actions">
-<button type="submit" class="btn btn-primary" >Submit</button>
+<button type="submit" class="btn btn-primary" >{% translate "Submit" %}</button>
 </div>
 </form>
 
                             
 {% endblock %}
-
 
 

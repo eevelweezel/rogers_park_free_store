@@ -1,9 +1,8 @@
-{% extends "./base.html" %}
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% load i18n %}
 
-
-<h1>Thank you for your inquiry</h1>
-<p>Your contact information and message was successfully submitted.</p>
-
+{% block content %}
+<h3>{% translate "Thank you for your inquiry" %}</h3>
+<p>{% translate "Your contact information and message was successfully submitted, we will respond shortly." %}</p>
+{% endblock %}
