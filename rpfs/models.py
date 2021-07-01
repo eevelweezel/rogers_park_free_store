@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
-#from multiselectfield import MultiSelectField
+from tinymce.models import HTMLField
+
 
 
 class ProductManager(models.Manager):
@@ -18,6 +19,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+class Page(models.Model):
+    title = models.CharField(max_length=255)
+    content = HTMLField()
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)        
