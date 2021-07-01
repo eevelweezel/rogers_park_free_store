@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rpfs',    
     'bootstrap4',
     'captcha',
-    #'multiselectfield',
+    'tinymce',
     
 ]
 

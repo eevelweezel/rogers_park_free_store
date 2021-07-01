@@ -28,6 +28,7 @@ urlpatterns = [
     path('item/<slug:slug>/', item_detail, name ="items"), 
     path('success/', successView, name='success'),
     path('captcha/', include('captcha.urls')),
+    path('tinymce/', include('tinymce.urls')),
 ]
  
 
