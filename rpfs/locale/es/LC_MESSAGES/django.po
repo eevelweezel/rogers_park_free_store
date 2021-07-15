@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 01:56+0000\n"
+"POT-Creation-Date: 2021-07-15 02:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: rpfs/forms.py:32 rpfs/forms.py:45
+msgid "Your name"
+msgstr ""
+
+#: rpfs/forms.py:33 rpfs/forms.py:46
+msgid "Email"
+msgstr ""
+
+#: rpfs/forms.py:34
+msgid "Subject"
+msgstr ""
+
+#: rpfs/forms.py:35 rpfs/forms.py:48
+msgid "Message"
+msgstr ""
+
+#: rpfs/forms.py:43
+msgid "Volunteer inquiry"
+msgstr ""
+
+#: rpfs/forms.py:47
+msgid "Pronouns"
+msgstr ""
+
+#: rpfs/forms.py:50
+msgid ""
+"Working at the Free Store location during \"closed to public\" times "
+"(organizing the space, putting supply packages together, etc.)"
+msgstr ""
+
+#: rpfs/forms.py:51
+msgid ""
+"Working at the Free Store location during \"open to public\" times (handing "
+"out requested supplies, helping neighbors make supply requests, etc.)"
+msgstr ""
+
+#: rpfs/forms.py:52
+msgid "Delivering supplies either from or to the Free Space (will need a car)"
+msgstr ""
+
+#: rpfs/forms.py:53
+msgid "Volunteer Coordination/Training/Support (can be working from home)"
+msgstr ""
+
+#: rpfs/forms.py:54
+msgid "Inventory and/or financial book-keeping (can be working from home)"
+msgstr ""
+
+#: rpfs/forms.py:55
+msgid "Outreach and/or social media (can be working from home)"
+msgstr ""
+
+#: rpfs/forms.py:56
+msgid "Translation (Spanish, French, Chinese, others if applicable)"
+msgstr ""
+
+#: rpfs/forms.py:57
+msgid "Other"
+msgstr ""
+
+#: rpfs/forms.py:59
+msgid "Volunteer Positions"
+msgstr ""
+
 #: rpfs/settings.py:133
 msgid "English"
 msgstr "Anglais"
@@ -26,7 +90,13 @@ msgstr "Anglais"
 msgid "Spanish"
 msgstr "Espanol"
 
-#: rpfs/templates/base.html:40 rpfs/templates/base.html:78
+#: rpfs/templates/about.html:7
+#, fuzzy
+#| msgid "Rogers Park Free Store"
+msgid "About Rogers Park Free Store"
+msgstr "Rogers Park Mercado Libre"
+
+#: rpfs/templates/base.html:40 rpfs/templates/base.html:78 rpfs/views.py:21
 msgid "Home"
 msgstr "Casa"
 
@@ -56,4 +126,74 @@ msgstr ""
 
 #: rpfs/templates/base.html:78
 msgid "Site by"
+msgstr ""
+
+#: rpfs/templates/home.html:13
+msgid ""
+"Support your community! Donate or exchange your unused household goods! "
+"Volunteer and help your neighbors!"
+msgstr ""
+
+#: rpfs/templates/home.html:14
+msgid ""
+"Rogers Park Free Store is a volunteer-run collective, run for the "
+"neighborhood, by the neighborhood."
+msgstr ""
+
+#: rpfs/templates/home.html:16
+msgid "Contact Us!"
+msgstr ""
+
+#: rpfs/templates/success.html:6
+msgid "Thank you for your inquiry"
+msgstr ""
+
+#: rpfs/templates/success.html:7
+msgid ""
+"Your contact information and message was successfully submitted, we will "
+"respond shortly."
+msgstr ""
+
+#: rpfs/templates/volunteer.html:9
+#, fuzzy
+#| msgid "Rogers Park Free Store"
+msgid "Rogers Park Free Store Volunteer Signup!"
+msgstr "Rogers Park Mercado Libre"
+
+#: rpfs/templates/volunteer.html:10
+msgid ""
+"Thank you for your interest in volunteering with the Rogers Park Free Store! "
+"We are a volunteer-led community organization working to provide mutual aid "
+"and meet some of the needs of the Rogers Park community through a <b>Free "
+"Store</b> by the Morse Red Line CTA stop."
+msgstr ""
+
+#: rpfs/templates/volunteer.html:11
+msgid ""
+"The Free Store needs volunteers for different jobs and capacities, and we "
+"would love to have you join and work with us! Volunteer roles are available "
+"both for those who want to work from home and those who would feel "
+"comfortable working in the Free Store location. For the Free Store space, "
+"there will be COVID guidelines pertaining to masks/PPE and distancing "
+"policies to ensure safety of our volunteers and the community (Further "
+"details to come.)"
+msgstr ""
+
+#: rpfs/templates/volunteer.html:12
+msgid ""
+"Currently volunteers are needed for the following roles: Delivery drivers, "
+"Creating Supply Packages, Volunteer Coordination, Book-keeping, Outreach/"
+"Social Media, Translation, Inventory Management, and more!"
+msgstr ""
+
+#: rpfs/templates/volunteer.html:13
+msgid "We look forward to hearing from you!"
+msgstr ""
+
+#: rpfs/templates/volunteer.html:23
+msgid "Volunteer with us!"
+msgstr ""
+
+#: rpfs/templates/volunteer.html:56
+msgid "Submit"
 msgstr ""
