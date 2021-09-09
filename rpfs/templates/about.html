@@ -3,7 +3,16 @@
 {% load i18n %}
 
 {% block content %}
-
+{% block content %}
+<div class="container">
+    <div class="card">
+      <div class="card-body">
+            {% for p in post %}
+              {{ p.content }}
+            {% endfor %}
+      </div>
+    </div>
+</div>
     <p>{% translate "About Rogers Park Free Store" %}</p>
 
 <section class="rfps-about-area mt-50 mb-100">

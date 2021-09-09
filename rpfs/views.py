@@ -8,7 +8,7 @@ from .forms import (
     ContactForm, 
     VolunteerForm
 ) 
-from .models import Category, Product
+from .models import Category, Product, Post
 
 
 def categories(request):
@@ -18,7 +18,8 @@ def categories(request):
 
 def all_products(request):
     products = Product.objects.all()
-    return render(request, 'home.html', {'products': products, 'title': _('Home')})
+    post = Post.objects.filter(page='Home')
+    return render(request, 'home.html', {'products': products, 'title': _('Home'), 'post': post})
 
 def category_list(request, category_slug=None):
     category = get_object_or_404(Category, slug=category_slug)
@@ -42,10 +43,12 @@ class VolunteerSignup(FormView):
         return form.send_email()
         
     def get(self, request, *args, **kwargs):
+        post = Post.objects.filter(page='volunteer')
         return TemplateResponse(
                    request,
                    'volunteer.html',
-                   context={'form': self.form_class(*args, **kwargs)},
+                   context={'form': self.form_class(*args, **kwargs),
+                       'post': post},
                    status=200)
 
 class ContactUs(FormView):
@@ -67,8 +70,19 @@ class ContactUs(FormView):
                    status=200)
 
 def about(request):
-    return render(request, 'about.html', {})    
+    post = Post.objects.filter(page='volunteer')
+    return render(request, 'about.html', {'post': post})    
 
 def successView(request):
     return render(request, 'success.html', {}) 
-    
+
+#does there not need to be a class here for "Posts?" But there would not be an actual page for it so do I need to define a class regarless of this?
+
+
+#def some_view(request, *args, **kwargs):
+   #post = <...something...>
+    #return TemplateResponse(
+               #request,
+               #'thing.html',
+               #context={'post': post}
+               #status=200)

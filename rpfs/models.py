@@ -63,7 +63,37 @@ class Product(models.Model):
 #    def __str__(self):
 #        return self.email    
 
-      
+class Post(models.Model):
+    # we don't allow dynamic page creation.  
+    # You don't have to use SlugField, you can use a ChoiceField, 
+    # where the choices are a list of the pages. # is the difference then the ability to type the page name in to search for it vs. having a predetermined list to choose from?
+        #page = models.ChoiceField(choices=PAGE_CHOICES)
+    HOME = 'Home'
+    ABOUT = 'About'
+    CONTACT = 'Contact'
+    VOLUNTEER = 'Volunteer'
+    PAGE_CHOICES = [
+        (HOME, 'Home'),
+        (ABOUT, 'About'),
+        (CONTACT, 'Contact'),
+        (VOLUNTEER, 'Volunteer'),
+    ]
+    page = models.CharField(
+        max_length=10, 
+        choices=PAGE_CHOICES, 
+        default=HOME,
+    )
+    content = models.TextField(
+        blank=True,
+        null=True,
+        default=' ')
+    link_text = models.CharField(max_length=256)
+    title = models.CharField(max_length=256)
+    create_date = models.DateTimeField(auto_now=True)
+    published = models.BooleanField(default=False)
+
+    def get_absolute_url(self):
+        return f'/pages/{self.slug}/'     
 
 
 
