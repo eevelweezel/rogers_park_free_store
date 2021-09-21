@@ -26,9 +26,9 @@ def category_list(request, category_slug=None):
     products = Product.objects.filter(category=category)
     return render(request, 'category.html', {'category': category, 'products': products})
 
-def item_detail(request, slug):
-    product = get_object_or_404(Product, slug=slug, still_avail=True)
-    return render(request, 'items.html', {'product': product})    
+#def item_detail(request, slug):
+    #product = get_object_or_404(Product, slug=slug, still_avail=True)
+    #return render(request, 'items.html', {'product': product})    
 
 
 class VolunteerSignup(FormView):
@@ -70,11 +70,15 @@ class ContactUs(FormView):
                    status=200)
 
 def about(request):
-    post = Post.objects.filter(page='volunteer')
+    post = Post.objects.filter(page='about')
     return render(request, 'about.html', {'post': post})    
 
 def successView(request):
     return render(request, 'success.html', {}) 
+
+def items_needed(request):
+    post = Post.objects.filter(page='items')
+    return render(request, 'items.html', {'post': post})        
 
 #does there not need to be a class here for "Posts?" But there would not be an actual page for it so do I need to define a class regarless of this?
 

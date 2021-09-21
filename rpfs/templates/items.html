@@ -1,13 +1,18 @@
 {% extends "../base.html" %}
 {% load static %}
-{% block title %}
-{% if category %}{{ category.name }}{% else %}Products{% endif %}
-{% endblock %}
+
 {% block content %}
-
-
-<main>
-
-</main>
-
+<div class="container">
+    <div class="card">
+      <div class="card-body">
+        {% for p in post %}
+            {{ p.content }}
+        {% endfor %}
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<h3>{% translate "CURRENT ITEMS SOUGHT FOR DONATION" %}</h3>
+<p>{% translate "We are currently seeking donations of: WINTER CLOTHING (Jackets, Boots, Adult/Kids clothing), TENTS (good condition only, no missing pieces), SLEEPING BAGS (rated for 30 degress or colder)." %}</p>
 {% endblock %}

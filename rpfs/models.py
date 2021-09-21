@@ -72,11 +72,13 @@ class Post(models.Model):
     ABOUT = 'About'
     CONTACT = 'Contact'
     VOLUNTEER = 'Volunteer'
+    ITEMS = 'Items'
     PAGE_CHOICES = [
         (HOME, 'Home'),
         (ABOUT, 'About'),
         (CONTACT, 'Contact'),
         (VOLUNTEER, 'Volunteer'),
+        (ITEMS, 'Items')
     ]
     page = models.CharField(
         max_length=10, 
