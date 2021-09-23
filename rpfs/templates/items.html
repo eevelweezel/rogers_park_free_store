@@ -1,5 +1,6 @@
-{% extends "../base.html" %}
+{% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="container">
@@ -14,5 +15,5 @@
 <br>
 <br>
 <h3>{% translate "CURRENT ITEMS SOUGHT FOR DONATION" %}</h3>
-<p>{% translate "We are currently seeking donations of: WINTER CLOTHING (Jackets, Boots, Adult/Kids clothing), TENTS (good condition only, no missing pieces), SLEEPING BAGS (rated for 30 degress or colder)." %}</p>
+<p>"{% translate "We are currently seeking donations of: WINTER CLOTHING (Jackets, Boots, Adult/Kids clothing), TENTS (good condition only, no missing pieces), SLEEPING BAGS (rated for 30 degress or colder)." %}</p>
 {% endblock %}

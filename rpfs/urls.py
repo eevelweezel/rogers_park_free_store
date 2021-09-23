@@ -25,7 +25,7 @@ urlpatterns = [
     path('contact/', ContactUs.as_view(), name ="contact"),
     path('volunteer/', VolunteerSignup.as_view(), name ="volunteer"),
     path('about/', about, name ="about"),
-    path('item/<slug:slug>/', items_needed, name ="items"), 
+    path('items/', items_needed, name ="items"), 
     path('success/', successView, name='success'),
     path('captcha/', include('captcha.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
